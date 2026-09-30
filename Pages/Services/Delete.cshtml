@@ -1,0 +1,47 @@
+﻿@page "{id:int}"
+@model сайт_курсач.Pages.Services.DeleteModel
+
+@{
+    ViewData["Title"] = "Удаление услуги";
+}
+
+<div class="form-container text-center">
+
+    <h1 class="page-title mb-4">
+        Удаление услуги
+    </h1>
+
+    <h4 class="mb-4">
+
+        Вы уверены, что хотите удалить услугу:
+
+        <strong>
+            @Model.Service.Name
+        </strong>
+
+        ?
+
+    </h4>
+
+    <form method="post">
+
+        <input type="hidden"
+               asp-for="Service.Id" />
+
+        <button type="submit"
+                class="btn action-delete">
+
+            Удалить
+
+        </button>
+
+        <a asp-page="Index"
+           class="btn custom-cancel-btn">
+
+            Отмена
+
+        </a>
+
+    </form>
+
+</div>

@@ -1,0 +1,60 @@
+﻿@page
+@model сайт_курсач.Pages.Clients.CreateModel
+
+@{
+    ViewData["Title"] = "Добавить клиента";
+}
+
+<div class="form-container">
+
+    <h1 class="page-title mb-4">
+        Добавить клиента
+    </h1>
+
+    <form method="post">
+
+        <div class="mb-4">
+
+            <label asp-for="Client.FirstName"
+                   class="form-label">
+
+                Имя
+
+            </label>
+
+            <input asp-for="Client.FirstName"
+                   class="form-control custom-input" />
+
+        </div>
+
+        <div class="mb-4">
+
+            <label asp-for="Client.PhoneNumber"
+                   class="form-label">
+
+                Телефон
+
+            </label>
+
+            <input asp-for="Client.PhoneNumber"
+                   class="form-control custom-input" />
+
+        </div>
+
+        <button type="submit"
+                class="btn custom-save-btn">
+
+            Сохранить
+
+        </button>
+
+        <a asp-page="Index"
+           class="btn custom-cancel-btn">
+
+            Назад
+
+        </a>
+
+    </form>
+
+</div>

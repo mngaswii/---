@@ -1,0 +1,62 @@
+@page
+@model сайт_курсач.Pages.Account.RegisterModel
+@{
+    ViewData["Title"] = "Регистрация";
+}
+
+<div class="login-page">
+    <div class="login-card">
+        <h1 class="login-title">LOFT Beauty</h1>
+        <p class="login-subtitle">Регистрация клиента</p>
+
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="alert alert-danger"></div>
+
+            <div class="mb-3">
+                <label asp-for="Input.FirstName" class="form-label">Имя</label>
+                <input asp-for="Input.FirstName" class="form-control custom-input" />
+                <span asp-validation-for="Input.FirstName" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Input.LastName" class="form-label">Фамилия</label>
+                <input asp-for="Input.LastName" class="form-control custom-input" />
+                <span asp-validation-for="Input.LastName" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Input.PhoneNumber" class="form-label">Телефон</label>
+                <input asp-for="Input.PhoneNumber" class="form-control custom-input" />
+                <span asp-validation-for="Input.PhoneNumber" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Input.Email" class="form-label">Email</label>
+                <input asp-for="Input.Email" class="form-control custom-input" />
+                <span asp-validation-for="Input.Email" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Input.Login" class="form-label">Логин</label>
+                <input asp-for="Input.Login" class="form-control custom-input" autocomplete="username" />
+                <span asp-validation-for="Input.Login" class="text-danger"></span>
+            </div>
+
+            <div class="mb-4">
+                <label asp-for="Input.Password" class="form-label">Пароль</label>
+                <input asp-for="Input.Password" type="password" class="form-control custom-input" autocomplete="new-password" />
+                <span asp-validation-for="Input.Password" class="text-danger"></span>
+            </div>
+
+            <button type="submit" class="btn login-button w-100">Зарегистрироваться</button>
+        </form>
+
+        <div class="text-center mt-3">
+            Уже есть аккаунт? <a asp-page="/Account/Login">Войти</a>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

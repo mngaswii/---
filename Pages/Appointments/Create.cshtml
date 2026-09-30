@@ -1,0 +1,95 @@
+﻿@page
+@model сайт_курсач.Pages.Appointments.CreateModel
+
+@{
+    ViewData["Title"] = "Новая запись";
+}
+
+<div class="form-container">
+
+    <h1 class="page-title mb-4">
+        Новая запись
+    </h1>
+
+    <form method="post">
+
+        <div class="mb-4">
+
+            <label asp-for="Appointment.ClientId"
+                   class="form-label">
+
+                Клиент
+
+            </label>
+
+            <select asp-for="Appointment.ClientId"
+                    asp-items="Model.Clients"
+                    class="form-select custom-input">
+            </select>
+
+        </div>
+
+        <div class="mb-4">
+
+            <label asp-for="Appointment.MasterId"
+                   class="form-label">
+
+                Мастер
+
+            </label>
+
+            <select asp-for="Appointment.MasterId"
+                    asp-items="Model.Masters"
+                    class="form-select custom-input">
+            </select>
+
+        </div>
+
+        <div class="mb-4">
+
+            <label asp-for="Appointment.ServiceId"
+                   class="form-label">
+
+                Услуга
+
+            </label>
+
+            <select asp-for="Appointment.ServiceId"
+                    asp-items="Model.Services"
+                    class="form-select custom-input">
+            </select>
+
+        </div>
+
+        <div class="mb-4">
+
+            <label asp-for="Appointment.AppointmentDate"
+                   class="form-label">
+
+                Дата и время
+
+            </label>
+
+            <input asp-for="Appointment.AppointmentDate"
+                   type="datetime-local"
+                   class="form-control custom-input" />
+
+        </div>
+
+        <button type="submit"
+                class="btn custom-save-btn">
+
+            Сохранить
+
+        </button>
+
+        <a asp-page="Index"
+           class="btn custom-cancel-btn">
+
+            Назад
+
+        </a>
+
+    </form>
+
+</div>

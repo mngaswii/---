@@ -1,0 +1,16 @@
+﻿@page "{id:int}"
+@model сайт_курсач.Pages.Clients.EditModel
+
+<h2>Edit Client</h2>
+
+<form method="post">
+    <input type="hidden" asp-for="Client.Id" />
+
+    <label>Name</label>
+    <input asp-for="Client.FirstName" />
+
+    <label>PhoneNumber</label>
+    <input asp-for="Client.PhoneNumber" />
+
+    <button type="submit">Save</button>
+</form>

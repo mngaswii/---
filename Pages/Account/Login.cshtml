@@ -1,0 +1,65 @@
+﻿@page
+@model сайт_курсач.Pages.Account.LoginModel
+
+@{
+    ViewData["Title"] = "Вход";
+}
+
+<div class="login-page">
+
+    <div class="login-card">
+
+        <h1 class="login-title">
+            LOFT Beauty
+        </h1>
+
+        <p class="login-subtitle">
+            Вход в CRM систему
+        </p>
+
+        <form method="post">
+
+            <div class="mb-3">
+
+                <label class="form-label">
+                    Логин
+                </label>
+
+                <input asp-for="Login"
+                       class="form-control custom-input" />
+
+            </div>
+
+            <div class="mb-4">
+
+                <label class="form-label">
+                    Пароль
+                </label>
+
+                <input asp-for="Password"
+                       type="password"
+                       class="form-control custom-input" />
+
+            </div>
+
+            <button type="submit"
+                    class="btn login-button w-100">
+
+                Войти
+
+            </button>
+
+        </form>
+
+        @if (!string.IsNullOrEmpty(Model.ErrorMessage))
+        {
+            <div class="alert alert-danger mt-3">
+
+                @Model.ErrorMessage
+
+            </div>
+        }
+
+    </div>
+
+</div>

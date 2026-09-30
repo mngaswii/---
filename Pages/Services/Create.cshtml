@@ -1,0 +1,60 @@
+﻿@page
+@model сайт_курсач.Pages.Services.CreateModel
+
+@{
+    ViewData["Title"] = "Добавить услугу";
+}
+
+<div class="form-container">
+
+    <h1 class="page-title mb-4">
+        Добавить услугу
+    </h1>
+
+    <form method="post">
+
+        <div class="mb-4">
+
+            <label asp-for="Service.Name"
+                   class="form-label">
+
+                Название услуги
+
+            </label>
+
+            <input asp-for="Service.Name"
+                   class="form-control custom-input" />
+
+        </div>
+
+        <div class="mb-4">
+
+            <label asp-for="Service.Price"
+                   class="form-label">
+
+                Цена
+
+            </label>
+
+            <input asp-for="Service.Price"
+                   class="form-control custom-input" />
+
+        </div>
+
+        <button type="submit"
+                class="btn custom-save-btn">
+
+            Сохранить
+
+        </button>
+
+        <a asp-page="Index"
+           class="btn custom-cancel-btn">
+
+            Назад
+
+        </a>
+
+    </form>
+
+</div>

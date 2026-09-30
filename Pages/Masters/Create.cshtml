@@ -1,0 +1,60 @@
+﻿@page
+@model сайт_курсач.Pages.Masters.CreateModel
+
+@{
+    ViewData["Title"] = "Добавить мастера";
+}
+
+<div class="form-container">
+
+    <h1 class="page-title mb-4">
+        Добавить мастера
+    </h1>
+
+    <form method="post">
+
+        <div class="mb-4">
+
+            <label asp-for="Master.FirstName"
+                   class="form-label">
+
+                Имя
+
+            </label>
+
+            <input asp-for="Master.FirstName"
+                   class="form-control custom-input" />
+
+        </div>
+
+        <div class="mb-4">
+
+            <label asp-for="Master.Specialization"
+                   class="form-label">
+
+                Специализация
+
+            </label>
+
+            <input asp-for="Master.Specialization"
+                   class="form-control custom-input" />
+
+        </div>
+
+        <button type="submit"
+                class="btn custom-save-btn">
+
+            Сохранить
+
+        </button>
+
+        <a asp-page="Index"
+           class="btn custom-cancel-btn">
+
+            Назад
+
+        </a>
+
+    </form>
+
+</div>
